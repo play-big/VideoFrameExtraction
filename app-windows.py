@@ -217,7 +217,7 @@ class VideoFrameExtractorGUI:
             startupinfo = None
             if os.name == 'nt':
                 startupinfo = subprocess.STARTUPINFO()
-                startupinfo.dwFlags |= subprocess.STARTUPINFO_USESHOWWINDOW
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
                 startupinfo.wShowWindow = subprocess.SW_HIDE
 
             process = subprocess.Popen(
