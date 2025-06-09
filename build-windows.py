@@ -43,7 +43,7 @@ def download_ffmpeg():
         print("ffmpeg download completed!")
         return True
     except Exception as e:
-        print(f"Failed to download ffmpeg: {str(e)}")
+        print("Failed to download ffmpeg:", e)
         print("Please check your network connection or download ffmpeg manually.")
         return False
 
@@ -106,19 +106,18 @@ exe = EXE(
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
-    entitlements_file=None,
-    # icon='icon.ico'
+    entitlements_file=None
 )
 """
         
-        with open("视频抽帧工具.spec", "w", encoding="utf-8") as f:
+        with open("VideoFrameExtractor.spec", "w", encoding="utf-8") as f:
             f.write(spec_content)
         
         # Run PyInstaller
         print("Running PyInstaller...")
         result = subprocess.run([
             "pyinstaller",
-            "视频抽帧工具.spec",
+            "VideoFrameExtractor.spec",
             "--clean",
             "--noconfirm"
         ], capture_output=True, text=True)
@@ -151,13 +150,13 @@ exe = EXE(
         
         # Copy main program
         print("Copying main program...")
-        shutil.copy("dist/视频抽帧工具.exe", release_dir)
+        shutil.copy("dist/VideoFrameExtractor.exe", release_dir)
         
         # Create startup batch file
         print("Creating startup script...")
         batch_content = """@echo off
 echo Starting Video Frame Extractor...
-start "" "视频抽帧工具.exe"
+start "" "VideoFrameExtractor.exe"
 """
         
         with open(release_dir / "start_video_frame_extractor.bat", "w", encoding="utf-8") as f:
@@ -168,7 +167,7 @@ start "" "视频抽帧工具.exe"
         return True
         
     except Exception as e:
-        print(f"Error during build: {str(e)}")
+        print("Error during build:", e)
         return False
 
 if __name__ == "__main__":

@@ -41,11 +41,11 @@ jobs:
       - name: 打包发布包
         run: |
           cd release
-          powershell Compress-Archive -Path * -DestinationPath ..\视频抽帧工具-Windows.zip -Force
+          powershell Compress-Archive -Path * -DestinationPath ..\VideoFrameExtractor-Windows.zip -Force
           cd ..
 
       - name: 上传构建产物
         uses: actions/upload-artifact@v4
         with:
-          name: 视频抽帧工具-Windows
-          path: 视频抽帧工具-Windows.zip 
+          name: VideoFrameExtractor-Windows
+          path: VideoFrameExtractor-Windows.zip 
