@@ -1,0 +1,4 @@
+pywin32>=228; platform_system=="Windows"
+pillow>=9.0.0
+pyinstaller>=6.0.0
+PyQt5>=5.15.0

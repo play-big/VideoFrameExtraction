@@ -1,0 +1,29 @@
+/Volumes/2T/Software/开发/video/venv/lib/python3.13/site-packages/setuptools/__init__.py:92: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+!!
+
+        ********************************************************************************
+        Requirements should be satisfied by a PEP 517 installer.
+        If you are using pip, you can try `pip install --use-pep517`.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+        ********************************************************************************
+
+!!
+  dist.fetch_build_eggs(dist.setup_requires)
+/Volumes/2T/Software/开发/video/venv/lib/python3.13/site-packages/py2app/__init__.py:30: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+running py2app
+creating /Volumes/2T/Software/开发/video/build/bdist.macosx-15.0-arm64/python3.13-standalone/app/collect
+creating /Volumes/2T/Software/开发/video/build/bdist.macosx-15.0-arm64/python3.13-standalone/app/temp
+creating build/bdist.macosx-15.0-arm64/python3.13-standalone/app/lib-dynload
+creating build/bdist.macosx-15.0-arm64/python3.13-standalone/app/Frameworks
+/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app/Contents/MacOS/视频抽帧工具-蛋包饭@快手: replacing existing signature
+/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app/Contents/MacOS/视频抽帧工具-蛋包饭@快手: signed app bundle with Mach-O thin (arm64) [com.kuaishou.videoextractor]
+/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app: replacing existing signature
+/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app: signed app bundle with Mach-O thin (arm64) [com.kuaishou.videoextractor]
+Add paths for VENV /opt/homebrew/opt/python@3.13 False
+*** creating application bundle: 视频抽帧工具-蛋包饭@快手 ***
+Copy '/Volumes/2T/Software/开发/video/venv/lib/python3.13/site-packages/py2app/apptemplate/prebuilt/main-arm64' -> '/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app/Contents/MacOS/视频抽帧工具-蛋包饭@快手'
+sign ['/Volumes/2T/Software/开发/video/dist/视频抽帧工具-蛋包饭@快手.app/Contents/MacOS/视频抽帧工具-蛋包饭@快手']
+Done!

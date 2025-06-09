@@ -1,0 +1,70 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tkinter/__init__.py", line 2068, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/Volumes/2T/Software/开发/video/app.py", line 131, in choose_video
+    self._update_status("已选择输入视频: " + file_path)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/2T/Software/开发/video/app.py", line 134, in _update_status
+    self.status_text.config(state="normal")
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'VideoFrameExtractorGUI' object has no attribute 'status_text'
+ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.0.13.3)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1.1_3 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x13c022540] Unknown cover type: 0x1.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Volumes/2T/共享/爆款视频/快手/蛋包饭/6月3日蛋蛋混剪视频/辛巴直播间画面.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    creation_time   : 2025-06-03T09:54:22.000000Z
+    Hw              : 1
+    bitrate         : 12000000
+    maxrate         : 0
+    te_is_reencode  : 1
+    encoder         : Lavf61.1.100
+  Duration: 00:00:21.41, start: 0.000000, bitrate: 10087 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 9894 kb/s, 30 fps, 30 tbr, 30 tbn (default)
+      Metadata:
+        creation_time   : 2025-06-03T09:54:22.000000Z
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 187 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-03T09:54:22.000000Z
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+At least one output file must be specified
+Exception in thread Thread-1 (run_ffmpeg_process):
+Traceback (most recent call last):
+  File "/Volumes/2T/Software/开发/video/app.py", line 74, in run_ffmpeg_process
+    remove_frames = total_frames // interval
+                    ~~~~~~~~~~~~~^^~~~~~~~~~
+TypeError: unsupported operand type(s) for //: 'NoneType' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1041, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/2T/Software/开发/video/app.py", line 103, in run_ffmpeg_process
+    self._update_status(f"处理失败: {str(e)}")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/2T/Software/开发/video/app.py", line 134, in _update_status
+    self.status_text.config(state="normal")
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'VideoFrameExtractorGUI' object has no attribute 'status_text'
